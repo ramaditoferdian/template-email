@@ -28,10 +28,10 @@
     <meta name="supported-color-schemes" content="light" />
     <!-- <title>{{ title }}</title> -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
     </style>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
     </style>
     <!-- CSS Reset : BEGIN -->
     <style>
@@ -59,7 +59,12 @@
       @media screen and (max-width: 500px) {
         .email-container {
           width: 100% !important;
+          height: 100vh !important;
           margin: auto !important;
+        }
+
+        .button-track {
+          width: 100% !important;
         }
 
         .stack-column,
@@ -99,11 +104,11 @@
       -ms-text-size-adjust: 100%;
       -webkit-text-size-adjust: 100%;
       mso-line-height-rule: exactly;
-      background-color: #d01380;
-      background-color: linear-gradient(90deg, #d01380 0%, #d9459b 100%);
-      background-image: url(https://i.ibb.co/tmSfWsH/email-bg-overlay-left.png),
+      background-color: #fafafa;
+      /* background-color: linear-gradient(90deg, #d01380 0%, #d9459b 100%); */
+      /* background-image: url(https://i.ibb.co/tmSfWsH/email-bg-overlay-left.png),
         url(https://i.ibb.co/fN1xhfg/email-bg-overlay-right.png),
-        linear-gradient(90deg, #d01380 0%, #d9459b 100%);
+        linear-gradient(90deg, #d01380 0%, #d9459b 100%); */
       background-size: 100%, 100%, cover;
       background-repeat: no-repeat, no-repeat, no-repeat;
       background-position: top 72px left, top 72px right, center;
@@ -121,11 +126,11 @@
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
         width: 100%;
-        background-color: #d01380;
-        background-color: linear-gradient(90deg, #d01380 0%, #d9459b 100%);
-        background-image: url(https://i.ibb.co/tmSfWsH/email-bg-overlay-left.png),
+        /* background-color: #d08413; */
+        /* background-color: linear-gradient(90deg, #d01380 0%, #d9459b 100%); */
+        /* background-image: url(https://i.ibb.co/tmSfWsH/email-bg-overlay-left.png),
           url(https://i.ibb.co/fN1xhfg/email-bg-overlay-right.png),
-          linear-gradient(90deg, #d01380 0%, #d9459b 100%);
+          linear-gradient(90deg, #d01380 0%, #d9459b 100%); */
         background-size: 100%, 100%, cover;
         background-repeat: no-repeat, no-repeat, no-repeat;
         background-position: top 72px left, top 72px right, center;
@@ -182,120 +187,20 @@
           border-spacing: 0;
           border-collapse: collapse;
           table-layout: fixed;
-          margin: 0 auto;
+          margin: 40px auto;
+
+          border: solid 1px #ebebeb;
         "
         class="email-container"
       >
         <!-- Email Header : BEGIN -->
-        <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%">
-          <td
-            style="
-              -ms-text-size-adjust: 100%;
-              -webkit-text-size-adjust: 100%;
-              padding: 40px 0 0 0;
-              text-align: center;
-              mso-table-lspace: 0pt;
-              mso-table-rspace: 0pt;
-            "
-            align="center"
-          >
-            <img
-              src="https://i.ibb.co/x2xKG4Q/email-space-logo.png"
-              style="
-                -ms-text-size-adjust: 100%;
-                -webkit-text-size-adjust: 100%;
-                -ms-interpolation-mode: bicubic;
-                color: #ffffff;
-              "
-              width="180"
-              height="52"
-              alt="Space App Powered by SALT"
-              border="0"
-            />
-          </td>
-        </tr>
         <!-- Email Header : END -->
-        <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%">
-          <!-- TODO: ${header} -->
 
-          <td
-            style="
-              -ms-text-size-adjust: 100%;
-              -webkit-text-size-adjust: 100%;
-              font-family: sans-serif;
-              color: #ffffff;
-              padding: 28px 0;
-              text-align: center;
-              font-size: 14px;
-              font-weight: normal;
-              mso-table-lspace: 0pt;
-              mso-table-rspace: 0pt;
-            "
-            align="center"
-          >
-            <h2
-              style="
-                -ms-text-size-adjust: 100%;
-                -webkit-text-size-adjust: 100%;
-                margin: 0;
-                font-weight: normal;
-              "
-            >
-              Hi
-              <b
-                style="
-                  -ms-text-size-adjust: 100%;
-                  -webkit-text-size-adjust: 100%;
-                "
-                >${name}</b
-              >,
-            </h2>
-            <h2
-              style="
-                -ms-text-size-adjust: 100%;
-                -webkit-text-size-adjust: 100%;
-                margin: 0;
-                font-weight: normal;
-              "
-            >
-              you are invited to join SALT Space Apps!
-            </h2>
-          </td>
-
-          <!-- TODO: END OF HEADER -->
-        </tr>
         <!-- Hero Image, Flush : BEGIN -->
         <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%">
-          <!-- <td
-            style="
-              -ms-text-size-adjust: 100%;
-              -webkit-text-size-adjust: 100%;
-              padding: 32px;
-              text-align: center;
-              vertical-align: middle;
-              background-color: #ffffff;
-              mso-table-lspace: 0pt;
-              mso-table-rspace: 0pt;
-            "
-            align="center"
-            valign="middle"
-            bgcolor="#ffffff"
-          >
-            <img
-              src="https://i.ibb.co/3ShgBWH/email-icon.png"
-              width="120"
-              height="120"
-              alt
-              border="0"
-              style="
-                -ms-text-size-adjust: 100%;
-                -webkit-text-size-adjust: 100%;
-                -ms-interpolation-mode: bicubic;
-              "
-            />
-          </td> -->
           <td
             style="
+              margin-top: 40px;
               -ms-text-size-adjust: 100%;
               -webkit-text-size-adjust: 100%;
               padding: 40px;
@@ -310,18 +215,34 @@
             valign="middle"
             bgcolor="#ffffff"
           >
-          <h1
-            style="
-              -ms-text-size-adjust: 100%;
-              -webkit-text-size-adjust: 100%;
-              margin: 0;
-              font-weight: 600;
-              font-size: 30px;
-              line-height: 36px;
-            "
-          >
-            Application Success Submited
-          </h1>
+            <img
+              src="https://salt.id/icons/salt.svg"
+              width="70"
+              height="56"
+              alt
+              border="0"
+              style="
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+                -ms-interpolation-mode: bicubic;
+                padding-bottom: 30px;
+              "
+            />
+            <!-- TITLE : BEGIN -->
+            <h1
+              style="
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+                margin: 0;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 36px;
+                text-transform: capitalize;
+              "
+            >
+              Invitation to User Interview
+            </h1>
+            <!-- TITLE : END -->
           </td>
         </tr>
 
@@ -340,14 +261,12 @@
               style="
                 width: 100%;
                 height: 1px;
-                background: #EEEEEE;
+                background: #eeeeee;
                 margin-bottom: 20px;
               "
             />
           </td>
         </tr>
-        <!-- Hero Image, Flush : END -->
-        <!-- 1 Column Text + Button : BEGIN -->
         <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%">
           <td
             style="
@@ -376,7 +295,7 @@
                 margin: 0 auto;
               "
             >
-              <!-- TODO: ${content} -->
+              <!-- TODO: ${content} BEGIN -->
 
               <tr
                 style="
@@ -408,29 +327,80 @@
                       margin: 0;
                     "
                   >
-                    Hi Hendra,<br>
-                    <br>
-                    We'd like to inform you that our team has received your application for the position 
+                    Hello Hendra,<br />
+                    <br />
+                    We're excited to invite you for a User Interview as part of our hiring process for the
                     <span
                       style="
                         -ms-text-size-adjust: 100%;
                         -webkit-text-size-adjust: 100%;
                         margin: 0;
-                        color: #D20680;
+                        color: #d20680;
                       "
                     >
                       UI/UX Designer
-                    </span> 
-                    at 
+                    </span>
+                    role. During this interview, we'll delve deeper into your experiences and skills to assess your fit for our team.
+                  </p>
+                  <p
+                    style="
+                      -ms-text-size-adjust: 100%;
+                      -webkit-text-size-adjust: 100%;
+                      margin: 0;
+                      font-weight: 800;
+                    "
+                  >
+                    <br />
+                    Date: 
                     <span
                       style="
                         -ms-text-size-adjust: 100%;
                         -webkit-text-size-adjust: 100%;
                         margin: 0;
-                        color: #D20680;
+                        font-weight: 400;
                       "
                     >
-                      SALT
+                      Thursday, 22 Feb 2024
+                    </span>
+                  </p>
+                  <p
+                    style="
+                      -ms-text-size-adjust: 100%;
+                      -webkit-text-size-adjust: 100%;
+                      margin: 0;
+                      font-weight: 800;
+                    "
+                  >
+                    Time: 
+                    <span
+                      style="
+                        -ms-text-size-adjust: 100%;
+                        -webkit-text-size-adjust: 100%;
+                        margin: 0;
+                        font-weight: 400;
+                      "
+                    >
+                      4.00 - 5.00pm
+                    </span>
+                  </p>
+                  <p
+                    style="
+                      -ms-text-size-adjust: 100%;
+                      -webkit-text-size-adjust: 100%;
+                      margin: 0;
+                      font-weight: 800;
+                    "
+                  >
+                    Duration: 
+                    <span
+                      style="
+                        -ms-text-size-adjust: 100%;
+                        -webkit-text-size-adjust: 100%;
+                        margin: 0;
+                        font-weight: 400;
+                      "
+                    >
+                      60 minutes
                     </span>
                   </p>
                   <p
@@ -440,43 +410,16 @@
                       margin: 0;
                     "
                   >
-                    <br>
-                    If you have any questions, feel free to reach out to us at 
-                    <span
-                      style="
-                        -ms-text-size-adjust: 100%;
-                        -webkit-text-size-adjust: 100%;
-                        margin: 0;
-                        color: #D20680;
-                      "
-                    >
-                      career@salt.co.id
-                    </span> 
+                    <br />
+                    Please confirm your availability for the interview by replying to this email with your preferred date and time. Please confirm your availability for the interview by replying to this email with your preferred date and time.
+                    <br /><br />
+                    If the provided schedule conflicts with your availability, kindly let us know, and we'll work together to find a suitable alternative.
+                    <br /><br />
+                    We're looking forward to a fruitful discussion!
                   </p>
-                  <p
-                    style="
-                      -ms-text-size-adjust: 100%;
-                      -webkit-text-size-adjust: 100%;
-                      margin: 0;
-                    "
-                  >
-                    <br>
-                    To track the progress of your application, please click the following link: 
-                    <span
-                      style="
-                        -ms-text-size-adjust: 100%;
-                        -webkit-text-size-adjust: 100%;
-                        margin: 0;
-                        color: #D20680;
-                      "
-                    >
-                      [Tracking Progress URL]
-                    </span>
-                    .
-                  </p>
-                  
+
                   <!-- TODO: BUTTON PUT HERE -->
-                  <br>
+                  <br />
                   <div
                     style="
                       -ms-text-size-adjust: 100%;
@@ -488,7 +431,7 @@
                       justify-content: center;
                     "
                   >
-                    <a 
+                    <a
                       role="button"
                       href="https://www.google.com"
                       target="_blank"
@@ -497,19 +440,21 @@
                         -ms-text-size-adjust: 100%;
                         -webkit-text-size-adjust: 100%;
                         text-decoration: none;
-                        color: #FFFFFF;
-                        background-color: #D20680;
+                        color: #ffffff;
+                        background-color: #d20680;
                         padding: 12px 24px;
                         border-radius: 100px;
-  
                       "
-                      align="center";
-                      valign="middle";
+                      align="center"
+                      ;
+                      valign="middle"
+                      ;
+                      class="button-track"
                     >
-                      Track The Progress
+                      Accept Invitation
                     </a>
                   </div>
-                  <br>
+                  <br />
 
                   <p
                     style="
@@ -518,12 +463,13 @@
                       margin: 0;
                     "
                   >
-                    Best regards,<br>
-                    Santa Angelica <br>
-                    HC SALT <br>
+                    Best regards,<br />
+                    Santa Angelica <br />
+                    HC SALT <br />
                   </p>
                 </td>
               </tr>
+              <!-- TODO: ${content} END-->
             </table>
           </td>
         </tr>
@@ -539,19 +485,16 @@
             "
             bgcolor="#ffffff"
           >
-            <!-- <div
+            <div
               style="
                 width: 100%;
-                height: 1px;
-                background: #EEEEEE;
-                margin-bottom: 20px;
+                height: 4px;
+                background: linear-gradient(90deg, #d20680 0%, #943cff 100%);
               "
-            /> -->
-            <div style="width: 100%; height: 4px; background: linear-gradient(90deg, #D20680 0%, #943CFF 100%);" />
+            />
           </td>
         </tr>
-        <!-- 1 Column Text + Button : END -->
-        <!-- Background Image with Text : BEGIN -->
+        <!-- Footer : BEGIN -->
         <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%">
           <td
             valign="middle"
@@ -559,7 +502,7 @@
               -ms-text-size-adjust: 100%;
               -webkit-text-size-adjust: 100%;
               text-align: center;
-              background-color: #f2d5e5;
+              background-color: #ffffff;
               mso-table-lspace: 0pt;
               mso-table-rspace: 0pt;
               background-position: center center;
@@ -598,7 +541,8 @@
                     -webkit-text-size-adjust: 100%;
                     text-align: center;
                     padding: 20px;
-                    font-family: sans-serif;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 400;
                     font-size: 12px;
                     color: #333333;
                     mso-table-lspace: 0pt;
@@ -606,15 +550,81 @@
                   "
                   align="center"
                 >
-                  <p
-                    style="
-                      -ms-text-size-adjust: 100%;
-                      -webkit-text-size-adjust: 100%;
-                      margin: 0;
-                    "
-                  >
-                    This email service is provided by SPACE.
-                  </p>
+                  <div style="display: flex; justify-content: center">
+                    <a
+                      href="https://www.linkedin.com/company/salt-indonesia/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style="
+                        -ms-text-size-adjust: 100%;
+                        -webkit-text-size-adjust: 100%;
+                        text-decoration: none;
+
+                        margin-right: 8px;
+
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 12px;
+                        color: #000;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        column-gap: 6px;
+                      "
+                    >
+                      <img
+                        src="https://pluspng.com/img-png/linkedin-icon-png--1600.png"
+                        width="12"
+                        height="12"
+                        alt="Get it on Google Play"
+                        border="0"
+                        style="
+                          -ms-text-size-adjust: 100%;
+                          -webkit-text-size-adjust: 100%;
+                          -ms-interpolation-mode: bicubic;
+                        "
+                      />
+                      Linkedin
+                    </a>
+                    <a
+                      href="https://www.instagram.com/salt.indonesia/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style="
+                        -ms-text-size-adjust: 100%;
+                        -webkit-text-size-adjust: 100%;
+                        text-decoration: none;
+
+                        font-family: 'Poppins', sans-serif;
+                        font-size: 12px;
+                        color: #000;
+
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        column-gap: 6px;
+                      "
+                    >
+                      <img
+                        src="https://pluspng.com/img-png/instagram-png-instagram-icon-1600.png"
+                        width="12"
+                        height="12"
+                        alt="Get it on Google Play"
+                        border="0"
+                        style="
+                          -ms-text-size-adjust: 100%;
+                          -webkit-text-size-adjust: 100%;
+                          -ms-interpolation-mode: bicubic;
+                        "
+                      />
+                      Instagram
+                    </a>
+                  </div>
                   <p
                     style="
                       -ms-text-size-adjust: 100%;
@@ -623,88 +633,14 @@
                       margin-top: 12px;
                     "
                   >
-                    @ ${currentYear} PT Ako Media Asia. All rights reserved.
+                    ©2024 SALT.ID. All rights reserved.
                   </p>
-                </td>
-              </tr>
-              <tr
-                style="
-                  -ms-text-size-adjust: 100%;
-                  -webkit-text-size-adjust: 100%;
-                "
-              >
-                <td
-                  valign="middle"
-                  style="
-                    -ms-text-size-adjust: 100%;
-                    -webkit-text-size-adjust: 100%;
-                    padding: 0 0 20px 0;
-                    text-align: center;
-                    mso-table-lspace: 0pt;
-                    mso-table-rspace: 0pt;
-                  "
-                  align="center"
-                >
-                  <a
-                    href="https://play.google.com/store/apps/details?id=salt.id.space.android"
-                    style="
-                      -ms-text-size-adjust: 100%;
-                      -webkit-text-size-adjust: 100%;
-                      text-decoration: none;
-                      margin-right: 12px;
-                    "
-                  >
-                    <img
-                      src="https://i.ibb.co/qgghQT0/email-googleplay.png"
-                      width="84"
-                      height="25"
-                      alt="Get it on Google Play"
-                      border="0"
-                      style="
-                        -ms-text-size-adjust: 100%;
-                        -webkit-text-size-adjust: 100%;
-                        -ms-interpolation-mode: bicubic;
-                      "
-                    />
-                  </a>
-                  <a
-                    href="https://apps.apple.com/id/app/space-apps/id6462989392"
-                    style="
-                      -ms-text-size-adjust: 100%;
-                      -webkit-text-size-adjust: 100%;
-                      text-decoration: none;
-                    "
-                  >
-                    <img
-                      src="https://i.ibb.co/d0ZvH10/email-appstore.png"
-                      width="84"
-                      height="25"
-                      alt="Available on the App Store"
-                      border="0"
-                      style="
-                        -ms-text-size-adjust: 100%;
-                        -webkit-text-size-adjust: 100%;
-                        -ms-interpolation-mode: bicubic;
-                      "
-                    />
-                  </a>
                 </td>
               </tr>
             </table>
           </td>
         </tr>
-        <tr style="-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%">
-          <td
-            style="
-              -ms-text-size-adjust: 100%;
-              -webkit-text-size-adjust: 100%;
-              padding: 0 0 40px 0;
-              mso-table-lspace: 0pt;
-              mso-table-rspace: 0pt;
-            "
-          ></td>
-        </tr>
-        <!-- Background Image with Text : END -->
+        <!-- Footer : END -->
       </table>
     </center>
   </body>
